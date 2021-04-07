@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  node:
+    build:
+      context: .
+      dockerfile: ./docker/node/Dockerfile
+    container_name: node-container
+    volumes:
+      - ./:/var/www/html
+      - node_modules:/var/www/html/node_modules
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    tty: true
+    stdin_open: true
+
+volumes:
+  node_modules:

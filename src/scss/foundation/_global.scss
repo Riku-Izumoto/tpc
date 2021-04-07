@@ -1,0 +1,145 @@
+// 共通
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+body {
+  color: #000;
+  font-size: 10px;
+  font-weight: 500;
+  font-feature-settings: 'palt';
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  line-height: 2;
+  position: relative;
+  hyphens: auto;
+  @include letterSpacing(15px, 0);
+  margin: 0 !important;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+.f-left {
+  float: left;
+}
+
+.f-right {
+  float: right;
+}
+
+.pc-only {
+  @include sp {
+    display: none !important;
+  }
+
+  @include pc {
+    display: inherit;
+  }
+}
+
+.sp-only {
+  @include sp {
+    display: inherit;
+  }
+
+  @include pc {
+    display: none !important;
+  }
+}
+
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+
+  @include sp {
+    width: calc(100% - 20%);
+    margin-bottom: 6.25rem;
+  }
+
+  @include pc {
+    width: calc(100% - 40%);
+    margin-bottom: 9.375rem;
+  }
+}
+
+.section-title {
+  @include sp {
+    @include font($fontSize: 20px, $weight: 600, $style: normal, $kerning: 0, $lineheight: 1.5);
+    margin-bottom: 1.5625rem;
+  }
+
+  @include pc {
+    @include font($fontSize: 35px, $weight: 600, $style: normal, $kerning: 0, $lineheight: 1.5);
+    margin-bottom: 3.125rem;
+  }
+}
+
+.text-title {
+  margin-bottom: 30px;
+
+  @include sp {
+    @include font($fontSize: 18px, $weight: 400, $style: normal, $kerning: 0, $lineheight: 1.5);
+  }
+
+  @include pc {
+    @include font($fontSize: 30px, $weight: 400, $style: normal, $kerning: 0, $lineheight: 1.5);
+  }
+}
+
+.text-title-small {
+  @include sp {
+    margin: 36px 0 40px;
+    @include font($fontSize: 20px, $weight: 500, $style: normal, $kerning: 0, $lineheight: 1.75);
+  }
+
+  @include pc {
+    @include font($fontSize: 34px, $weight: 500, $style: normal, $kerning: 0, $lineheight: 1.75);
+  }
+}
+
+.text {
+  @include sp {
+    margin: 36px 0 40px;
+    @include font($fontSize: 15px, $weight: 500, $style: normal, $kerning: 0, $lineheight: 1.75);
+  }
+
+  @include pc {
+    @include font($fontSize: 15px, $weight: 500, $style: normal, $kerning: 0, $lineheight: 1.75);
+  }
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.fadein {
+  opacity: 0;
+  transform: translate3d(0, 56px, 0);
+  transition: all .5s ease-out;
+
+  &.scrollin {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

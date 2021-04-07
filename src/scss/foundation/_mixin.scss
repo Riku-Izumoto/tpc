@@ -1,0 +1,19 @@
+@function calcRem( $size ) {
+  @return  ( $size / 16px ) * 1rem;
+}
+
+@mixin letterSpacing( $fontSize, $value ) {
+  letter-spacing: calc( #{$fontSize} * 0.001 * #{$value} );
+}
+
+@mixin defaultTransition() {
+  transition: all .2s ease-out;
+}
+
+@mixin font($fontSize: 1rem, $weight: 400, $style: normal, $kerning: 0, $lineheight: 1.75 ) {
+  font-size: $fontSize;
+  font-weight: $weight;
+  font-style: $style;
+  line-height: $lineheight;
+  @include letterSpacing( $fontSize, $kerning );
+}

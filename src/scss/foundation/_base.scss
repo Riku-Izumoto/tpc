@@ -1,0 +1,181 @@
+// 共通
+
+
+::-moz-selection {
+  background: #{$black};
+  color: #fff;
+}
+
+::selection {
+  background: #{$black};
+  color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #000;
+  font-family: "Noto-sansJP", sans-serif;
+  font-feature-settings: 'palt';
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
+  position: relative;
+  hyphens: auto;
+  line-break: strict;
+  background: #FFFFFF;
+  @include font($fontSize: 16px, $weight: 400, $style: normal, $kerning: 50, $lineheight: 1.75);
+  color: $black;
+
+}
+
+#canvas {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transition: opacity .3s ease-out;
+
+  @include sp {
+    opacity: .05;
+  }
+
+  @include pc {
+    opacity: .05;
+  }
+
+  &.is-active {
+    @include sp {
+      opacity: .3;
+    }
+
+    @include pc {
+      opacity: .3;
+    }
+  }
+}
+
+#main {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+.f-left {
+  float: left !important;
+}
+
+.f-right {
+  float: right !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.align-center {
+  text-align: center !important;
+}
+
+.align-right {
+  text-align: right !important;
+}
+
+.align-left {
+  text-align: left !important;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.section {
+  margin: 50px auto;
+}
+
+.pc-only {
+  @include sp {
+    display: none !important;
+  }
+
+  @include pc {
+    display: inherit;
+  }
+}
+
+.sp-only {
+  @include sp {
+    display: inherit;
+  }
+
+  @include pc {
+    display: none !important;
+  }
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+
+  @include sp {
+    width: calc(100% - 20%);
+    margin-bottom: 6.25rem;
+  }
+
+  @include pc {
+    width: calc(100vw - 460px);
+    margin-bottom: 9.375rem;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+}
+
+.vertical {
+  width: 1px;
+  height: 18px;
+  background-color: #000;
+}
+
+.fadein {
+  opacity: 0;
+  transform: translate3d(0, 56px, 0);
+  transition: all .5s ease-out;
+
+  &.scrollin {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

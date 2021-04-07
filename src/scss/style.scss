@@ -1,0 +1,24 @@
+// foundation
+@import "foundation/breakpoint";
+@import "foundation/mixin";
+@import 'foundation/reset';
+@import 'foundation/var';
+@import 'foundation/base';
+
+// layout
+@import 'layout/header';
+@import 'layout/footer';
+
+// object
+// component
+@import 'object/component/btn';
+@import 'object/component/shadow';
+@import 'object/component/text';
+@import 'object/component/slide';
+// project
+// theme
+// utility
+
+// pages
+@import 'pages/index';
+@import 'pages/policy';

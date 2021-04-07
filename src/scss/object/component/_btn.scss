@@ -1,0 +1,13 @@
+.btn {
+  padding: 13px 30px 13px 30px;
+  color: $white;
+  background-color: $green-blod;
+  border-radius: 25px;
+  @include font($fontSize: 15px, $weight: 700, $style: normal, $kerning: 50, $lineheight: 1);
+  transition: all .3s ease-out;
+
+  &:hover {
+    background-color: $black;
+    color: white;
+  }
+}

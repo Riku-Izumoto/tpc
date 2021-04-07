@@ -1,0 +1,73 @@
+.section-title {
+  @include pc {
+    @include font($fontSize: 36px, $weight: 700, $style: normal, $kerning: 25, $lineheight: 1.75);
+  }
+
+  @include sp {
+    @include font($fontSize: 25px, $weight: 700, $style: normal, $kerning: 25, $lineheight: 1.75);
+  }
+
+  span {
+    @include pc {
+      @include font($fontSize: 20px, $weight: 700, $style: normal, $kerning: 25, $lineheight: 1);
+    }
+
+    @include sp {
+      @include font($fontSize: 20px, $weight: 700, $style: normal, $kerning: 25, $lineheight: 1);
+    }
+  }
+}
+
+.text-title {
+  @include pc {
+    @include font($fontSize: 30px, $weight: 700, $style: normal, $kerning: 25, $lineheight: 1.75);
+  }
+
+  @include sp {
+    @include font($fontSize: 20px, $weight: 700, $style: normal, $kerning: 25, $lineheight: 1);
+  }
+
+  span {
+    @include pc {
+      @include font($fontSize: 14px, $weight: 700, $style: normal, $kerning: 25, $lineheight: 1);
+    }
+
+    @include sp {
+      @include font($fontSize: 15px, $weight: 700, $style: normal, $kerning: 25, $lineheight: 1);
+    }
+  }
+}
+
+.text-large {
+  @include pc {
+    @include font($fontSize: 18px, $weight: 700, $style: normal, $kerning: 25, $lineheight: 1.75);
+  }
+
+  @include sp {
+    @include font($fontSize: 16px, $weight: 700, $style: normal, $kerning: 25, $lineheight: 1.75);
+  }
+}
+
+.text {
+  @include pc {
+    @include font($fontSize: 16px, $weight: 700, $style: normal, $kerning: 25, $lineheight: 1.75);
+  }
+
+  @include sp {
+    @include font($fontSize: 14px, $weight: 700, $style: normal, $kerning: 25, $lineheight: 1.75);
+  }
+}
+
+.text-normal {
+  @include pc {
+    @include font($fontSize: 16px, $weight: 400, $style: normal, $kerning: 25, $lineheight: 1.75);
+  }
+
+  @include sp {
+    @include font($fontSize: 14px, $weight: 400, $style: normal, $kerning: 25, $lineheight: 1.75);
+  }
+}
+
+.fontFamily-Montserrat {
+  font-family: 'Montserrat', sans-serif;
+}

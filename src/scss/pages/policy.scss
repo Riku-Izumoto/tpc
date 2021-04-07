@@ -1,0 +1,72 @@
+.p-policy {
+  &__first {
+    &__bg {
+      position: relative;
+      img {
+        width: 100%;
+      }
+      &__title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        margin: auto;
+        text-align: center;
+        @include sp {
+          width: 70%;
+        }
+        span {
+          position: relative;
+        }
+        .section-title {
+          position: absolute;
+          margin: auto;
+          padding-top: 40px;
+          @include pc {
+            font-size: 2.3vw;
+            bottom: 0;
+            left: 0;
+            right: 0;
+          }
+          @include sp {
+            font-size: 6vw;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            -webkit-transform: translateY(-50%) translateX(-50%);
+          }
+        }
+      }
+    }
+  }
+  &__second {
+    background-color: $green-light;
+    &__box {
+      width: 80%;
+      margin: auto;
+      background-color: $white;
+      @include pc {
+        padding: 60px 180px;
+      }
+      @include sp {
+        padding: 30px 20px;
+      }
+      .text-normal {
+        margin-bottom: 30px;
+      }
+      &__inner {
+        margin-bottom: 30px;
+      }
+      &__list {
+        @include pc {
+          padding-left: 50px;
+        }
+        @include sp {
+          padding-left: 40px;
+        }
+      }
+    }
+  }
+}
