@@ -793,7 +793,7 @@ body {
         background-size: 80%;
         background-position: center; } }
     .p-index__second__title .section-title {
-      padding-top: 40px; }
+      padding-top: 65px; }
   .p-index__second__list {
     margin: auto; }
     @media (min-width: 960px) {
@@ -897,7 +897,7 @@ body {
         left: 0;
         right: 0;
         margin: auto;
-        padding-top: 40px; }
+        padding-top: 65px; }
   .p-index__third__box__list {
     list-style: none;
     width: 100%;
@@ -1011,7 +1011,7 @@ body {
         background-size: 80%;
         background-position: center; } }
     .p-index__forth__title .section-title {
-      padding-top: 40px; }
+      padding-top: 65px; }
   .p-index__forth__text {
     text-align: center;
     margin-bottom: 60px; }
