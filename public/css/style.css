@@ -474,6 +474,8 @@ body {
   background-color: #B8EBCF;
   text-align: center;
   padding: 20px; }
+  .footer .text-normal {
+    font-size: 10px; }
 
 .btn {
   padding: 13px 30px 13px 30px;
@@ -486,10 +488,26 @@ body {
   line-height: 1;
   letter-spacing: calc( 15px * 0.001 * 50);
   -webkit-transition: all .3s ease-out;
-  transition: all .3s ease-out; }
+  transition: all .3s ease-out;
+  outline: 1px solid;
+  outline-color: #00B14D;
+  outline-offset: 0px;
+  display: inline-block;
+  -webkit-transition: .3s;
+  transition: .3s; }
   .btn:hover {
-    background-color: #4A4A4A;
-    color: white; }
+    -webkit-animation: light .8s infinite;
+            animation: light .8s infinite; }
+
+@-webkit-keyframes light {
+  100% {
+    outline-color: transparent;
+    outline-offset: 12px; } }
+
+@keyframes light {
+  100% {
+    outline-color: transparent;
+    outline-offset: 12px; } }
 
 .shadow {
   background-color: #FFFFFF;
@@ -685,7 +703,7 @@ body {
         top: 10%; } }
     @media (max-width: 959px) {
       .p-index__first__statement {
-        top: 16%; } }
+        top: 11%; } }
     .p-index__first__statement__text {
       color: #FFFFFF;
       text-shadow: 0px 3px 10px #4A4A4A; }
@@ -707,18 +725,23 @@ body {
     background-color: #FFFFFF;
     position: absolute;
     width: 100%;
-    bottom: 5%;
+    bottom: 10vh;
     margin: auto; }
+    @media (max-width: 1100px) {
+      .p-index__first__textBox {
+        bottom: 5vh; } }
     @media (min-width: 960px) {
       .p-index__first__textBox {
+        height: 20rem;
         left: 10%;
         max-width: 80vw;
-        padding: 30px 12%; } }
+        padding: 3% 12%; } }
     @media (max-width: 959px) {
       .p-index__first__textBox {
         left: 5%;
         max-width: 90vw;
-        padding: 30px 6%; } }
+        padding: 30px 6%;
+        height: 50vh; } }
     .p-index__first__textBox__title {
       -webkit-box-align: start;
       -webkit-align-items: flex-start;
@@ -814,19 +837,24 @@ body {
                   align-items: center;
           margin-bottom: 20px; }
           .p-index__second__list__item__left__category__img {
-            margin-right: 30px; }
+            margin-right: 15px; }
           .p-index__second__list__item__left__category .text {
             height: -webkit-fit-content;
             height: -moz-fit-content;
             height: fit-content;
             color: #00B14D; }
-        .p-index__second__list__item__left img {
-          margin-bottom: 20px; }
         .p-index__second__list__item__left .section-title {
           border-bottom: dotted 4px #00B14D;
           margin-bottom: 30px; }
         .p-index__second__list__item__left .text-normal {
-          margin-bottom: 20px; }
+          margin: 20px 0 40px 0; }
+        @media (max-width: 959px) {
+          .p-index__second__list__item__left__btn {
+            display: block;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+            width: fit-content;
+            margin: auto; } }
       .p-index__second__list__item__right {
         display: block;
         max-width: 47%;
@@ -905,7 +933,6 @@ body {
         .p-index__third__box__list__item__text {
           width: 100%; } }
   .p-index__third__box2 {
-    width: 80%;
     margin: auto;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -913,12 +940,14 @@ body {
             justify-content: space-between; }
     @media (min-width: 960px) {
       .p-index__third__box2 {
+        width: 80%;
         display: -webkit-box;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex; } }
     @media (max-width: 959px) {
       .p-index__third__box2 {
+        width: 100%;
         display: block; } }
     .p-index__third__box2__item {
       width: 100%;
@@ -938,8 +967,14 @@ body {
         .p-index__third__box2__item__title .section-title {
           color: #00B14D;
           text-align: center; }
+        .p-index__third__box2__item__title img {
+          width: 100vw; }
       .p-index__third__box2__item__textBox {
         margin-bottom: 60px; }
+        @media (max-width: 959px) {
+          .p-index__third__box2__item__textBox {
+            width: 80%;
+            margin: 0 auto 30px; } }
     @media (min-width: 960px) {
       .p-index__third__box2__item2 {
         margin-right: 50px; } }
