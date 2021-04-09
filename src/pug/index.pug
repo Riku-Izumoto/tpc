@@ -147,13 +147,13 @@ html(lang="ja")
             | 下記フォームに必要事項をご入力の上お問合せください。
             br
             | 5営業日以内に担当よりご連絡差し上げます。
-        form.p-index__forth__form
+        form.p-index__forth__form(method="post" action="mail.php")
           .p-index__forth__form__item
-            label.text-normal.p-index__forth__form__item__text(for="name" name="姓名") お名前
+            label.text-normal.p-index__forth__form__item__text(for="name" name="お名前") お名前
             input.text-normal.p-index__forth__form__item__input(type="text" name="name" required="required")
           .p-index__forth__form__item
-            label.text-normal.p-index__forth__form__item__text(for="email" name="email") メールアドレス
-            input.text-normal.p-index__forth__form__item__input(type="mail" name="email" placeholder="例）sample@sample.com" required="required")
+            label.text-normal.p-index__forth__form__item__text(for="email" name="Email") メールアドレス
+            input.text-normal.p-index__forth__form__item__input(type="mail" name="Email" placeholder="例）sample@sample.com" required="required")
           .p-index__forth__form__item
             label.text-normal.p-index__forth__form__item__text(for="paragraph" name="お問い合わせ項目") お問い合わせ項目
             select.p-index__forth__form__item__input.color-gray(type="text" name="paragraph" required="required")
